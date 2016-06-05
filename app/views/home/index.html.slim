@@ -1,0 +1,17 @@
+#main-container class='container'
+  .row
+    #sidebar class='col-xs-3'
+      p Prueba de barra lateral
+
+    #content class='col-xs-9'
+      h1
+        = @event[:name]
+      ul
+        li = t('date_from').capitalize+': '+Time.at(@event[:date][:from]).strftime('%d/%m/%Y')
+        li = t('date_to').capitalize+': '+ Time.at(@event[:date][:to]).strftime('%d/%m/%Y')
+        li = t('schedule').capitalize+': '+ @event[:date][:schedule]
+        li = t('country').capitalize+': '+ @event[:location][:country].capitalize
+        li = t('city').capitalize+': '+ @event[:location][:city].capitalize
+        li = t('address').capitalize+': '+ @event[:location][:address]
+        li = t('postal_code').capitalize+': '+@event[:location][:postal_code]
+
