@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  country: 'country'
+  date_from: 'from'
+  date_to: 'to'
+  schedule: 'schedule'
+  postal_code: 'postal code'
+  city: 'city'
+  address: 'address'
